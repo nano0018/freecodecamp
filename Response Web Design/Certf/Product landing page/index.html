@@ -1,0 +1,108 @@
+<!-- Objective: Build an app that is functionally similar to https://product-landing-page.freecodecamp.rocks
+
+User Stories:
+
+//* Your product landing page should have a header element with a corresponding id="header"
+//* You can see an image within the header element with a corresponding id="header-img" (A logo would make a good image here)
+//* Within the #header element, you can see a nav element with a corresponding id="nav-bar"
+//* You can see at least three clickable elements inside the nav element, each with the class nav-link
+* When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page
+* You can watch an embedded product video with id="video"
+* Your landing page has a form element with a corresponding id="form"
+* Within the form, there is an input field with id="email" where you can enter an email address
+* The #email input field should have placeholder text to let users know what the field is for
+* The #email input field uses HTML5 validation to confirm that the entered text is an email address
+* Within the form, there is a submit input with a corresponding id="submit"
+* When you click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit)
+* The navbar should always be at the top of the viewport
+* Your product landing page should have at least one media query
+* Your product landing page should utilize CSS flexbox at least once
+* Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
+
+Note: Be sure to add <link rel="stylesheet" href="styles.css"> in your HTML to link your stylesheet and apply your CSS -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Music Store</title>
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <header id="header">
+        <div id="logo">
+          <img
+            id="header-img"
+            src="https://logopond.com/logos/dea251ca00de1f0263e9fab22032fc41.png"
+            alt="logo-store"
+          />
+        </div>
+        <nav id="nav-bar">
+          <ul>
+            <li>
+              <a href="#instruments" class="nav-link">Instruments</a>
+              <a href="#accessories" class="nav-link">Accessories </a>
+              <a href="#audio" class="nav-link">Audio</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div>
+        <section id="instruments">
+            <div class="grid">
+                <div class="icon">
+                    <img src="https://static.vecteezy.com/system/resources/previews/001/206/672/non_2x/music-instrument-electric-guitar-png.png" alt="guitar">
+                </div>
+                <div class="description">
+                    <h2>Electric and acoustic guitars</h2>
+                    <p>From entry to premium tier guitars. Multiple shapes, mics and guitar string gauges also available!</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="icon">
+                    <img src="https://static.vecteezy.com/system/resources/previews/001/208/328/non_2x/band-png.png" alt="piano">
+                </div>
+                <div class="description">
+                    <h2>Piano and keyboards</h2>
+                    <p>From analogic to digital keyboard. Compact keyboard and full weight key. MIDI interface to workstation. Many branches, styles and keyboard types.</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="icon">
+                    <img src="https://static.vecteezy.com/system/resources/previews/001/206/669/non_2x/music-instrument-drum-set-png.png" alt="drums">
+                </div>
+                <div class="description">
+                    <h2>Drums</h2>
+                    <p>From standard set to premium tier drums. Multiple shapes, digital and analogic. Using simple drum set to complex room set!</p>
+                </div>
+            </div>
+        </section>
+        <section id="accessories"></section>
+        <section id="audio">
+            <iframe
+            id="video"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0"
+            frameborder="0"
+            allowfullscreen=""
+          ></iframe>
+        </section>
+      </div>
+    </div>
+    <section>
+      <h3>Subscribe</h3>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email"
+        />
+        <input type="submit" name="submit" id="submit" value="Go!" />
+      </form>
+    </section>
+  </body>
+</html>
