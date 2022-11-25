@@ -6,14 +6,14 @@ User Stories:
 //* You can see an image within the header element with a corresponding id="header-img" (A logo would make a good image here)
 //* Within the #header element, you can see a nav element with a corresponding id="nav-bar"
 //* You can see at least three clickable elements inside the nav element, each with the class nav-link
-* When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page
-* You can watch an embedded product video with id="video"
-* Your landing page has a form element with a corresponding id="form"
-* Within the form, there is an input field with id="email" where you can enter an email address
-* The #email input field should have placeholder text to let users know what the field is for
-* The #email input field uses HTML5 validation to confirm that the entered text is an email address
-* Within the form, there is a submit input with a corresponding id="submit"
-* When you click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit)
+//* When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page
+//* You can watch an embedded product video with id="video"
+//* Your landing page has a form element with a corresponding id="form"
+//* Within the form, there is an input field with id="email" where you can enter an email address
+//* The #email input field should have placeholder text to let users know what the field is for
+//* The #email input field uses HTML5 validation to confirm that the entered text is an email address
+//* Within the form, there is a submit input with a corresponding id="submit"
+//* When you click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit)
 * The navbar should always be at the top of the viewport
 * Your product landing page should have at least one media query
 * Your product landing page should utilize CSS flexbox at least once
@@ -46,63 +46,176 @@ Note: Be sure to add <link rel="stylesheet" href="styles.css"> in your HTML to l
               <a href="#instruments" class="nav-link">Instruments</a>
               <a href="#accessories" class="nav-link">Accessories </a>
               <a href="#audio" class="nav-link">Audio</a>
+              <a href="#contact-us" class="nav-link">Contact us</a>
             </li>
           </ul>
         </nav>
       </header>
-      <div>
+      <div class="container">
         <section id="instruments">
-            <div class="grid">
-                <div class="icon">
-                    <img src="https://static.vecteezy.com/system/resources/previews/001/206/672/non_2x/music-instrument-electric-guitar-png.png" alt="guitar">
-                </div>
-                <div class="description">
-                    <h2>Electric and acoustic guitars</h2>
-                    <p>From entry to premium tier guitars. Multiple shapes, mics and guitar string gauges also available!</p>
-                </div>
+          <h2>Instruments</h2>
+          <div class="grid">
+            <div class="icon">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/001/206/672/non_2x/music-instrument-electric-guitar-png.png"
+                alt="guitar"
+              />
             </div>
-            <div class="grid">
-                <div class="icon">
-                    <img src="https://static.vecteezy.com/system/resources/previews/001/208/328/non_2x/band-png.png" alt="piano">
-                </div>
-                <div class="description">
-                    <h2>Piano and keyboards</h2>
-                    <p>From analogic to digital keyboard. Compact keyboard and full weight key. MIDI interface to workstation. Many branches, styles and keyboard types.</p>
-                </div>
+            <div class="description">
+              <h2>Electric and acoustic guitars</h2>
+              <p>
+                From entry to premium tier guitars. Multiple shapes, mics and
+                guitar string gauges also available!
+              </p>
             </div>
-            <div class="grid">
-                <div class="icon">
-                    <img src="https://static.vecteezy.com/system/resources/previews/001/206/669/non_2x/music-instrument-drum-set-png.png" alt="drums">
-                </div>
-                <div class="description">
-                    <h2>Drums</h2>
-                    <p>From standard set to premium tier drums. Multiple shapes, digital and analogic. Using simple drum set to complex room set!</p>
-                </div>
+          </div>
+          <div class="grid">
+            <div class="icon">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/001/208/328/non_2x/band-png.png"
+                alt="piano"
+              />
             </div>
+            <div class="description">
+              <h2>Piano and keyboards</h2>
+              <p>
+                From analogic to digital keyboard. Compact keyboard and full
+                weight key. MIDI interface to workstation. Many branches, styles
+                and keyboard types.
+              </p>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="icon">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/001/206/669/non_2x/music-instrument-drum-set-png.png"
+                alt="drums"
+              />
+            </div>
+            <div class="description">
+              <h2>Drums</h2>
+              <p>
+                From standard set to premium tier drums. Multiple shapes,
+                digital and analogic. Using simple drum set to complex room set!
+              </p>
+            </div>
+          </div>
         </section>
-        <section id="accessories"></section>
+        <section id="accessories">
+          <h2>Accessories</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Instrument</th>
+                <th>Element</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th rowspan="4">Guitar</th>
+                <td>Pick</td>
+              </tr>
+              <tr>
+                <td>Guitar strap</td>
+              </tr>
+              <tr>
+                <td>Tuner</td>
+              </tr>
+              <tr>
+                <td>Slope</td>
+              </tr>
+              <tr>
+                <th rowspan="2">Piano</th>
+                <td>Sustain pedal</td>
+              </tr>
+              <tr>
+                <td>Tuner</td>
+              </tr>
+              <tr>
+                <th rowspan="3">Analog synth</th>
+                <td>Sustain pedal</td>
+              </tr>
+              <tr>
+                <td>Distortion pedal</td>
+              </tr>
+              <tr>
+                <td>FX pedal</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
         <section id="audio">
+          <h2>Audio equipment</h2>
+          <div class="grid">
             <iframe
-            id="video"
-            height="315"
-            src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0"
-            frameborder="0"
-            allowfullscreen=""
-          ></iframe>
+              id="video"
+              src="https://www.youtube-nocookie.com/embed/YEFBmOL0xrc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div class="description">
+              <h2>Steinberg audio interfaces</h2>
+              <p>
+                Do you need an ultra-portable recording solution, but with
+                flexible inputs that mean no compromise for any style of sound?
+                The UR22mkII is not just an audio interface, it’s a full mobile
+                production platform to record any type of audio in studio
+                quality on your laptop or iOS device.
+              </p>
+            </div>
+          </div>
+          <div class="grid">
+            <iframe
+              id="video"
+              src="https://www.youtube.com/embed/kGb7C9g-85E"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>        
+            <div class="description">
+              <h2>Focusrite audio interfaces</h2>
+              <p>
+                You’ve found the simplest way to create incredible recordings of your music. Featuring the smallest USB audio interface we make, mic, headphones and all the cables you need to get started, Scarlett Solo Studio is ready to record every song you’ll ever write.
+              </p>
+            </div>
+          </div>
+          <div class="grid">
+            <iframe
+              id="video"
+              src="https://www.youtube-nocookie.com/embed/YEFBmOL0xrc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div class="description">
+              <h2>Steinberg audio interfaces</h2>
+              <p>
+                Do you need an ultra-portable recording solution, but with
+                flexible inputs that mean no compromise for any style of sound?
+                The UR22mkII is not just an audio interface, it’s a full mobile
+                production platform to record any type of audio in studio
+                quality on your laptop or iOS device.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="contact-us">
+          <h3>Subscribe</h3>
+          <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+            />
+            <input type="submit" name="submit" id="submit" value="Go!" />
+          </form>
         </section>
       </div>
     </div>
-    <section>
-      <h3>Subscribe</h3>
-      <form id="form" action="https://www.freecodecamp.com/email-submit">
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Enter your email"
-        />
-        <input type="submit" name="submit" id="submit" value="Go!" />
-      </form>
-    </section>
   </body>
 </html>
